@@ -42,10 +42,6 @@ add_custom_command(
 	DEPENDS libsodium
 )
 add_custom_target(libsodium_js ALL DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/libsodium/lib/libsodium.js)
-install(
-	FILES ${CMAKE_CURRENT_BINARY_DIR}/libsodium/lib/libsodium.a
-	      ${CMAKE_CURRENT_BINARY_DIR}/libsodium/lib/libsodium.la
-	      ${CMAKE_CURRENT_BINARY_DIR}/libsodium/lib/libsodium.js
-	DESTINATION .
-)
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/libsodium/include DESTINATION .)
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/libsodium/lib DESTINATION .)
 
