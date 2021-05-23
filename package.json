@@ -1,0 +1,25 @@
+{
+  "name": "libepir-sodium-wasm",
+  "version": "0.0.1",
+  "description": "EllipticPIR WebAssembly (Emscripten) build for libsodium",
+  "main": "dist/libsodium.js",
+  "scripts": {
+    "build": "mkdir -p build && cd build && cmake -DCMAKE_INSTALL_PREFIX=../dist .. && make -j$(node -e 'console.log(require(\"os\").cpus().length)') all install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EllipticPIR/libepir-sodium-wasm.git"
+  },
+  "keywords": [
+    "EllipticPIR",
+    "private-information-retrieval",
+    "PIR",
+    "EC-ElGamal"
+  ],
+  "author": "Masahiko Hyuga <mail@mhyuga.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EllipticPIR/libepir-sodium-wasm/issues"
+  },
+  "homepage": "https://github.com/EllipticPIR/libepir-sodium-wasm#readme"
+}
