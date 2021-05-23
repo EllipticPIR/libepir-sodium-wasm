@@ -4,7 +4,9 @@
   "description": "EllipticPIR WebAssembly (Emscripten) build for libsodium",
   "main": "dist/libsodium.js",
   "scripts": {
-    "build": "mkdir -p build && cd build && cmake -DCMAKE_INSTALL_PREFIX=../dist .. && make -j$(node -e 'console.log(require(\"os\").cpus().length)') all install"
+    "prepack": "npm run clean && npm run build",
+    "build": "mkdir -p build && cd build && cmake -DCMAKE_INSTALL_PREFIX=../dist .. && make -j$(node -e 'console.log(require(\"os\").cpus().length)') all install",
+    "clean": "rm -rf build dist"
   },
   "repository": {
     "type": "git",

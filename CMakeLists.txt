@@ -28,7 +28,6 @@ ExternalProject_Add(libsodium
 # libsodium.js
 add_custom_command(
 	OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/libsodium/lib/libsodium.js
-	#COMMAND emcc -s MODULARIZE -s ALLOW_MEMORY_GROWTH=1 -s ALLOW_TABLE_GROWTH=1 -s SINGLE_FILE=1 -s EXPORTED_FUNCTIONS=['_malloc, _free'] -s EXPORTED_RUNTIME_METHODS=['addFunction, removeFunction'] -s EXPORT_ALL=1 -s LINKABLE=1 -flto=full -O3 ./libsodium/lib/libsodium.a -o ${CMAKE_CURRENT_BINARY_DIR}/libsodium/lib/libsodium.js
 	COMMAND emcc
 	-s MODULARIZE
 	-s ALLOW_MEMORY_GROWTH=1
