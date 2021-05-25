@@ -1,6 +1,6 @@
 {
   "name": "libepir-sodium-wasm",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "EllipticPIR WebAssembly (Emscripten) build for libsodium",
   "main": "dist/libsodium.js",
   "scripts": {
