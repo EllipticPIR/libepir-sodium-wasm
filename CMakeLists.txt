@@ -29,6 +29,7 @@ ExternalProject_Add(libsodium
 add_custom_command(
 	OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/libsodium/lib/libsodium.js
 	COMMAND emcc
+	-s ENVIRONMENT=web
 	-s MODULARIZE
 	-s ALLOW_MEMORY_GROWTH=1
 	-s ALLOW_TABLE_GROWTH=1
